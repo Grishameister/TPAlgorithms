@@ -7,7 +7,7 @@
 #include <cassert>
 
 struct IGraph {
-    virtual ~IGraph() {}
+    virtual ~IGraph() = default;
 
     // Добавление ребра от from к to.
     virtual void AddEdge(int from, int to) = 0;

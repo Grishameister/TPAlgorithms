@@ -6,7 +6,7 @@ ArcGraph::ArcGraph(size_t vertices_count): vertices(vertices_count) {
 ArcGraph::ArcGraph(const IGraph& graph) {
     vertices = graph.VerticesCount();
     for (int from = 0; from < graph.VerticesCount(); from++) {
-        std::vector next_vertices = graph.GetNextVertices(from);
+        std::vector<int> next_vertices = graph.GetNextVertices(from);
         for (auto& vertex: next_vertices) {
             AddEdge(from, vertex);
         }

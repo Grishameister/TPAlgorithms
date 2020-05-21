@@ -8,6 +8,8 @@ public:
 
     explicit MatrixGraph(const IGraph& graph);
 
+    ~MatrixGraph() = default;
+
     void AddEdge(int from, int to) override;
 
     int VerticesCount() const override;

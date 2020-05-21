@@ -6,7 +6,7 @@ ListGraph::ListGraph(size_t vertices_count) : vertices(vertices_count) {
 ListGraph::ListGraph(const IGraph& graph) {
     vertices.resize(graph.VerticesCount());
     for (int from = 0; from < graph.VerticesCount(); from++) {
-        std::vector next_vertices = graph.GetNextVertices(from);
+        std::vector<int> next_vertices = graph.GetNextVertices(from);
         for (auto& vertex: next_vertices) {
             AddEdge(from, vertex);
         }

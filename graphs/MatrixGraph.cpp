@@ -14,7 +14,7 @@ MatrixGraph::MatrixGraph(const IGraph& graph) {
     }
 
     for (int from = 0; from < graph.VerticesCount(); from++) {
-        std::vector vertices = graph.GetNextVertices(from);
+        std::vector<int> vertices = graph.GetNextVertices(from);
         for (auto& vertex: vertices) {
             AddEdge(from, vertex);
         }
